@@ -6,7 +6,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 
-import com.qa.base.BaseDriver;
+import com.qa.base.LaunchAppiumDriver;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -18,7 +18,7 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class TouchActionConcept extends BaseDriver {
+public class TouchActionConcept extends LaunchAppiumDriver {
 
 	public static void main(String[] args) throws MalformedURLException {
 
@@ -55,5 +55,4 @@ public class TouchActionConcept extends BaseDriver {
 		
 		((AndroidDriver<MobileElement>) driver).pressKey(new KeyEvent(AndroidKey.BACK));
 	}
-
 }

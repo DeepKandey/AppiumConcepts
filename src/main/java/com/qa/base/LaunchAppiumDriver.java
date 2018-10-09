@@ -13,18 +13,18 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 
-public class BaseDriver {
+public class LaunchAppiumDriver {
 	public static AppiumDriver<MobileElement> driver;
 	public static DesiredCapabilities capabilities;
 
 	public static AppiumDriver<MobileElement> Capabilities() throws MalformedURLException {
-		File appDir = new File("src");
+		File appDir = new File("src/main/resources");
 		File app = new File(appDir, "ApiDemos-debug.apk");
 		capabilities = new DesiredCapabilities();
 
 		capabilities.setCapability("platformName", MobilePlatform.ANDROID);
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android");
-		// capabilities.setCapability("deviceName", "Deepak");
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android"); // For real Device
+		// capabilities.setCapability("deviceName", "Deepak"); // For emulator
 		capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		// capabilities.setCapability(MobileCapabilityType.FULL_RESET,false);
 		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);

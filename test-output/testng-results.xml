@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="17630" started-at="2018-10-09T03:20:50Z" finished-at="2018-10-09T03:21:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17630" started-at="2018-10-09T03:20:50Z" finished-at="2018-10-09T03:21:08Z">
+      <class name="com.qa.test.BrowserLaunch">
+        <test-method status="PASS" signature="chromeBrowserLaunch()[pri:0, instance:com.qa.test.BrowserLaunch@7d9d1a19]" name="chromeBrowserLaunch" duration-ms="17572" started-at="2018-10-09T03:20:50Z" finished-at="2018-10-09T03:21:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chromeBrowserLaunch -->
+      </class> <!-- com.qa.test.BrowserLaunch -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
