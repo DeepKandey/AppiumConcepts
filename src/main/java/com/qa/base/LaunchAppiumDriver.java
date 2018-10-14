@@ -14,6 +14,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 
 public class LaunchAppiumDriver {
+	
 	public static AppiumDriver<MobileElement> driver;
 	public static DesiredCapabilities capabilities;
 
@@ -26,9 +27,10 @@ public class LaunchAppiumDriver {
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android"); // For real Device
 		// capabilities.setCapability("deviceName", "Deepak"); // For emulator
 		capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-		// capabilities.setCapability(MobileCapabilityType.FULL_RESET,false);
+		
 		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		return driver;
 	}
 }

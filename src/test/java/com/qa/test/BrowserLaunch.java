@@ -19,14 +19,16 @@ public class BrowserLaunch {
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android device");
 		capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
-		// capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "25");
+
 		AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
 				new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-		driver.get("https://www.facebook.com/");
-		System.out.println("Facebook Title-->" + driver.getTitle());
-		System.out.println("Context of the browser--> " + driver.getContext()); // views- native, hybrid, Web view
-		driver.quit();
 
+		driver.get("https://www.facebook.com/");
+
+		System.out.println("Facebook Title-->" + driver.getTitle());
+		System.out.println("Context of the browser--> " + driver.getContext()); // chromium
+
+		driver.quit();
 	}
 
 }

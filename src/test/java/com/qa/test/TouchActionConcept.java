@@ -30,11 +30,7 @@ public class TouchActionConcept extends LaunchAppiumDriver {
 		System.out.println("Device Time: " + driver.getDeviceTime());
 
 		driver.findElement(By.xpath("//android.widget.TextView[@text='Views']")).click();
-		/*
-		 * driver.
-		 * findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(resourceId(\"android:id/text1\"));"
-		 * );
-		 */
+		
 		Dimension dimension = driver.manage().window().getSize();
 		Double screenHeightStart = dimension.getHeight() * 0.5;
 		int scrollStart = screenHeightStart.intValue();
